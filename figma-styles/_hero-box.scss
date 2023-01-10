@@ -1,0 +1,93 @@
+.hero-box-wrapper {
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 170px;
+    padding-bottom: 250px;
+    background-image: url(images/Group\ 2574.svg);
+    background-repeat: no-repeat;
+    background-position: 80% 100px;
+    background-size: 343px auto;
+    position: relative;
+
+    @include lg {
+        background-position: 100% 100px;
+    }
+
+    @include sm {
+        background-position: 120% 100px;
+    }
+
+    @include s {
+        background-position: 150% 100px;
+    }
+
+    @include xs {
+        background-position: 190% 100px;
+    }
+
+    &::before {
+        content: url(images/Ellipse\ 119\ \(2\).svg);
+        position: absolute;
+        left: -132px;
+        bottom: 150px;
+        height: 132px;
+    }
+
+    .hero-box {
+        padding-top: 50px;
+        padding-left: 40px;
+        width: 48%;
+        background-image: url(images/Ellipse\ 116.svg);
+        background-repeat: no-repeat;
+        background-position: 230px 5%;
+        background-size: 84px;
+
+        @include sm {
+            width: 60%;
+        }
+
+        @include s {
+            width: 80%;
+        }
+
+        @include xs {
+            width: 65%;
+            padding-left: 10px;
+            background-position: 150px 5%;
+        }
+
+        .page-title {
+            color: $color-dark-focus;
+            font-size: 48px;
+            line-height: $line-height-regular;
+            margin-bottom: 24px;
+            margin-top: 0;
+            text-transform: uppercase;
+            font-weight: $font-weight-medium;
+
+            @include md {
+                font-size: 40px;
+            }
+
+            @include sm {
+                font-size: 36px;
+            }
+
+            @include xs {
+                font-size: 32px;
+            }
+        }
+
+        .page-description {
+            margin-bottom: 32px;
+            padding-right: 20px;
+            font-size: $font-size-normal-medium;
+            line-height: $line-height-medium;
+            letter-spacing: $letter-spacing-regular;
+            color: $color-regular;
+            font-weight: $font-weight-regular;
+        }
+
+    }
+}

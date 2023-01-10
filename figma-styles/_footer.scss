@@ -1,0 +1,224 @@
+.footer {
+    padding: 100px 0;
+    background-color: #F0DCC5;
+
+    .footer-wrapper {
+        display: flex;
+        gap: 66px;
+
+        @include xl {
+            gap: 25px;
+        }
+
+        @include md {
+            flex-wrap: wrap;
+        }
+
+        .footer-about-us {
+            width: 20%;
+
+            @include xl {
+                width: 30%;
+            }
+
+            @include md {
+                width: 100%;
+            }
+
+            .footer-logo {
+                margin-bottom: 16px;
+
+                img {
+                    vertical-align: middle;
+                }
+
+                img:first-child {
+                    height: 35px;
+                }
+            }
+
+            .footer-description {
+                margin-bottom: 16px;
+                font-weight: $font-weight-regular;
+                font-size: 14px;
+                line-height: $line-height-medium;
+                letter-spacing: $letter-spacing-regular;
+                color: $color-regular;
+            }
+
+            .copy-rights {
+                margin-bottom: 16px;
+                font-weight: $font-weight-regular;
+                font-size: 14px;
+                line-height: 24px;
+                color: $color-regular;
+
+                p {
+                    margin: 0;
+                }
+            }
+
+            .social-platforms {
+                display: flex;
+                gap: 16px;
+
+                .social-icon {
+                    height: 32px;
+                    width: 32px;
+                    background-color: rgba(100, 123, 100, 0.1);
+                    border-radius: 100px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+
+        .footer-menu {
+            display: flex;
+            gap: 120px;
+            width: 80%;
+
+            @include xl {
+                gap: 30px;
+            }
+
+            @include lg {
+                gap: 20px;
+            }
+
+            @include md {
+                width: 100%;
+            }
+
+            @include xs {
+                flex-wrap: wrap;
+            }
+
+            .footer-menu-section {
+                width: 25%;
+                display: flex;
+                flex-direction: column;
+
+                &:not(.message-box) {
+                    gap: 24px;
+                }
+
+                @include xl {
+                    width: 25%;
+                }
+
+                @include md {
+                    width: 25%;
+                }
+
+                @include xs {
+                    width: 45%;
+                }
+
+                .footer-menu-section-title {
+                    font-weight: $font-weight-medium;
+                    font-size: $font-size-normal-medium;
+                    line-height: 30px;
+                    color: #647B64;
+
+                    &.uppercase {
+                        text-transform: uppercase;
+                    }
+                }
+
+                .footer-menu-item-list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+
+                    .footer-menu-item {
+
+                        .footer-menu-item-link {
+                            text-decoration: none;
+                            font-weight: $font-weight-regular;
+                            font-size: $font-size-normal;
+                            line-height: 26px;
+                            color: $color-dark-focus;
+                        }
+                    }
+                }
+
+                &.message-box {
+                    width: 50%;
+
+                    @include xl {
+                        width: 45%;
+                    }
+
+                    @include md {
+                        width: 50%;
+                    }
+
+                    @include xs {
+                        width: 100%;
+                        padding-top: 20px;
+                    }
+
+                    textarea {
+                        margin-top: 13px;
+                        margin-bottom: 28px;
+                        width: 100%;
+                        resize: none;
+                        background-color: #FFFFFF;
+                        border-radius: 2px;
+                        border-color: #FFFFFF;
+
+                        &::-webkit-input-placeholder {
+                            font-weight: $font-weight-regular;
+                            font-size: 14px;
+                            line-height: 24px;
+                            color: $color-regular;
+                            padding-left: 20px;
+                            padding: 12px 24px;
+                            font-family: 'Montserrat', sans-serif;
+                        }
+
+                        &::-moz-placeholder {
+                            font-weight: $font-weight-regular;
+                            font-size: 14px;
+                            line-height: 24px;
+                            color: $color-regular;
+                            padding-left: 20px;
+                            padding: 12px 24px;
+                            font-family: 'Montserrat', sans-serif;
+                        }
+
+                        &:-ms-input-placeholder {
+                            font-weight: $font-weight-regular;
+                            font-size: 14px;
+                            line-height: 24px;
+                            color: $color-regular;
+                            padding-left: 20px;
+                            padding: 12px 24px;
+                            font-family: 'Montserrat', sans-serif;
+                        }
+
+                        &:-o-input-placeholder {
+                            font-weight: $font-weight-regular;
+                            font-size: 14px;
+                            line-height: 24px;
+                            color: $color-regular;
+                            padding-left: 20px;
+                            padding: 12px 24px;
+                            font-family: 'Montserrat', sans-serif;
+                        }
+                    }
+
+                    .full-width {
+                        width: 100%;
+                        padding: 20px 22px 20px 22px;
+                    }
+                }
+            }
+        }
+    }
+}

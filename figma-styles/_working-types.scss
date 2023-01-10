@@ -1,0 +1,98 @@
+.working-types {
+    padding: 70px 0;
+    position: relative;
+    overflow: hidden;
+
+    .working-types-wrapper {
+
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        &::before {
+            content: url('images/Dots\ 8px.1.svg');
+            position: absolute;
+            left: -30px;
+            bottom: -40px;
+            z-index: 1;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: -800px;
+            bottom: -40px;
+            background: linear-gradient(197.92deg, rgba(239, 128, 49, 0) -227.37%, rgba(239, 128, 49, 0.15) 1.58%, rgba(239, 128, 49, 0) 103.02%);
+            transform: rotate(180deg);
+            border-radius: $border-radius-regular;
+            height: 180px;
+            width: 1000px;
+
+
+            @include s {
+                overflow: hidden;
+            }
+        }
+
+
+        .working-types-info-wrapper {
+            display: flex;
+            gap: 40px;
+
+            @include lg {
+                gap: 20px;
+            }
+
+            @include sm {
+                overflow: hidden;
+                min-width: 699px;
+            }
+
+            .working-type {
+                padding: 75px 50px;
+                background: linear-gradient(358.27deg, rgba(100, 123, 100, 0.77) -118.86%, rgba(100, 123, 100, 0) 25.62%, rgba(100, 123, 100, 0) 98.53%), #FFFFFF;
+                border-radius: $border-radius-regular;
+                transition-timing-function: ease-in-out;
+                z-index: 2;
+
+                @include lg {
+                    padding-left: 25px;
+                    padding-right: 25px;
+                }
+
+                &:hover {
+                    background-color: $color-dark-green;
+
+                    .working-type-icon svg path {
+                        fill: $color-bright;
+                    }
+
+                    .working-type-title,
+                    .working-type-description {
+                        color: $color-bright;
+                    }
+
+                }
+
+                .working-type-icon {
+                    margin-bottom: 24px;
+
+                    svg path {
+                        fill: #647B64;
+                        transition-timing-function: ease-in-out;
+                    }
+                }
+
+                .woking-type-title {
+                    transition-timing-function: ease-in-out;
+
+                }
+
+                .working-type-description {
+                    font-weight: $font-weight-medium;
+                    transition-timing-function: ease-in-out;
+                }
+            }
+        }
+    }
+}

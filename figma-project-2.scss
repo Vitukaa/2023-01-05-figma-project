@@ -1,0 +1,102 @@
+@import 'figma-styles/_variables';
+@import 'figma-styles/responsive';
+@import 'figma-styles/header';
+@import 'figma-styles/hero-box';
+@import 'figma-styles/offers';
+@import 'figma-styles/working-types';
+@import 'figma-styles/bussiness-model';
+@import 'figma-styles/slider';
+@import 'figma-styles/footer';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-wrapper {
+    background: linear-gradient(3deg, rgba(255, 255, 255, 1) 30%, rgba(255, 243, 233, 1) 100%);
+}
+
+.button-small {
+    background: linear-gradient(102.3deg, #647B64 -4.62%, #66AC66 178.22%), linear-gradient(102.3deg, #0BB1E3 -4.62%, #0F2976 178.22%), #0E70AF;
+    padding: 10px 15px;
+    border-radius: 3px;
+    color: $color-bright;
+}
+
+.button-big {
+    background: linear-gradient(102.3deg, #647B64 -4.62%, #66AC66 178.22%);
+    box-shadow: 0px 20px 40px rgba(128, 143, 150, 0.19);
+    border-radius: 2px;
+    color: $color-bright;
+    text-transform: uppercase;
+    width: 350px;
+    max-width: 100%;
+    font-weight: 600;
+    font-size: $font-size-normal;
+    line-height: 125.5%;
+    letter-spacing: 0.155em;
+    text-decoration: none;
+    padding: 27px 22px 27px 29px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.center {
+    text-align: center;
+}
+
+.section-subheading {
+    margin: 0;
+    margin-bottom: 17px;
+    color: #F3B562;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-medium;
+    line-height: 33px;
+    text-transform: uppercase;
+}
+
+.section-title {
+    margin: 0;
+    margin-bottom: 40px;
+    color: #647B64;
+    font-weight: $font-weight-medium;
+    font-size: 41px;
+    line-height: 110%;
+    text-transform: uppercase;
+
+    @include s {
+        font-size: 32px
+    }
+}
+
+.section-description {
+    margin-bottom: 40px;
+    color: $color-regular;
+    font-weight: $font-weight-regular;
+    font-size: $font-size-normal;
+    line-height: $line-height-medium;
+    letter-spacing: $letter-spacing-regular;
+}
+
+.section-unit-title {
+    margin: 0;
+    margin-bottom: 6px;
+    font-weight: $font-weight-medium;
+    font-size: $font-size-medium;
+    line-height: $line-height-regular;
+    color: $color-dark-focus;
+}

@@ -1,0 +1,76 @@
+.business-model {
+    padding: 70px 0;
+    position: relative;
+
+    .business-model-wrapper {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        gap: 100px;
+
+        @include xl {
+            gap: 0;
+        }
+
+        .business-model-image-wrapper {
+            width: 50%;
+            position: relative;
+
+            @include xl {
+                width: 45%;
+                overflow: hidden;
+                right: 0;
+            }
+
+            @include lg {
+                width: 40%;
+            }
+
+            @include md {
+                width: 35%;
+            }
+
+            @include sm {
+                width: 30%
+            }
+
+            img {
+                height: 100%;
+
+                @include xl {
+                    position: absolute;
+                    right: 0;
+                }
+            }
+        }
+
+        .business-model-info {
+            width: 50%;
+            padding: 50px;
+            margin-left: auto;
+            z-index: 10;
+            position: relative;
+
+            @include xl {
+                width: 55%;
+
+            }
+
+            @include lg {
+                width: 60%;
+            }
+
+            @include md {
+                width: 65%;
+            }
+
+            @include sm {
+                width: 70%;
+            }
+
+            @include xs {
+                width: 85%;
+            }
+        }
+    }
+}

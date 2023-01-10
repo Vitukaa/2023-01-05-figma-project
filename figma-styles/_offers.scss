@@ -1,0 +1,100 @@
+.main-offers {
+
+    .main-offers-wrapper {
+        padding: 70px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+
+        @include md {
+            flex-wrap: wrap;
+        }
+
+        .main-offers-info {
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            padding: 20px 0;
+            position: relative;
+
+            @include lg {
+                width: 50%;
+            }
+
+            @include md {
+                width: 60%;
+            }
+
+            &::before {
+                content: '';
+                background: linear-gradient(164.26deg, rgba(239, 128, 49, 0) -335.51%, rgba(239, 128, 49, 0.15) -20.24%, rgba(239, 128, 49, 0) 119.45%);
+                position: absolute;
+                width: 1000px;
+                height: 120px;
+                right: 0;
+            }
+
+
+        }
+
+        .offers-list {
+            width: 45%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+
+            @include lg {
+                width: 52%;
+            }
+
+
+            @include md {
+                width: 100%;
+            }
+
+            .offer {
+                padding: 40px;
+                width: 50%;
+                border-radius: $border-radius-regular;
+                transition-timing-function: ease-in-out;
+
+                &:hover {
+                    background-color: $color-bright;
+                    box-shadow: 0px 5.87438px 31.33px rgba(155, 148, 148, 0.17);
+
+                    .offer-icon {
+                        background-color: $color-dark-green;
+
+                        svg path {
+                            fill: $color-bright;
+                        }
+                    }
+                }
+
+            }
+
+            .offer-icon {
+                margin-bottom: 16px;
+                padding: 10px;
+                border-radius: $border-radius-regular;
+                background-color: $color-bright;
+                display: inline-block;
+                transition-timing-function: ease-in-out;
+
+                svg path {
+                    fill: #647B64;
+                    transition-timing-function: ease-in-out;
+                }
+            }
+
+            .offer-description {
+                font-weight: $font-weight-regular;
+                font-size: $font-size-small;
+                line-height: $line-height-medium;
+                letter-spacing: $letter-spacing-regular;
+                color: $color-regular;
+            }
+        }
+    }
+}

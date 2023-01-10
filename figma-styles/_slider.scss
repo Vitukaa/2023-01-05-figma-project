@@ -1,0 +1,112 @@
+.slider {
+    padding: 70px 0 150px 0;
+
+    .slider-wrapper {
+        .slider-header {
+            padding-bottom: 50px;
+            display: flex;
+            justify-content: space-between;
+
+            .slider-buttons {
+                margin: 0;
+                padding: 0;
+
+                @include sm {
+                    display: none;
+                }
+
+                button.button-left,
+                button.button-right {
+                    background-color: transparent;
+                    border: none;
+                    padding: 22px;
+                    border-radius: 100px;
+                    cursor: pointer;
+
+                    &.button-right {
+                        transform: rotate(180deg);
+                    }
+
+                    &:hover {
+                        background: linear-gradient(102.3deg, #647B64 -4.62%, #6ADD6A 178.22%);
+                        box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.06);
+
+                        svg path {
+                            fill: $color-bright;
+                        }
+                    }
+
+                    svg {
+                        vertical-align: middle;
+                    }
+                }
+            }
+        }
+
+        .main-slider {
+            
+            .slide-wrapper {
+
+                display: flex;
+                gap: 40px;
+
+                @include sm {
+                    overflow: hidden;
+                }
+
+                @include s {
+                    gap: 30px;
+                }
+
+                .slide {
+                    padding: 40px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    background: linear-gradient(358.27deg, rgba(100, 123, 100, 0.77) -118.86%, rgba(100, 123, 100, 0) 25.62%, rgba(100, 123, 100, 0) 98.53%), #FFFFFF;
+                    border-radius: $border-radius-regular;
+                    min-width: 240px;
+
+                    @include s {
+                        padding: 20px;
+                    }
+
+                    .slide-image {
+                        width: 50%;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .slide-title {
+                        width: 50%;
+
+                        .specialty {
+                            font-weight: $font-weight-medium;
+                            font-size: $font-size-normal;
+                            line-height: $line-height-regular;
+                            color: $color-dark-focus;
+                        }
+
+                        .name {
+                            font-weight: $font-weight-regular;
+                            font-size: $font-size-small;
+                            line-height: $line-height-medium;
+                            letter-spacing: $letter-spacing-regular;
+                            color: $color-regular;
+                        }
+                    }
+
+                    .slide-description {
+                        font-weight: $font-weight-regular;
+                        font-size: $font-size-normal;
+                        line-height: $line-height-medium;
+                        letter-spacing: $letter-spacing-regular;
+                        color: $color-regular;
+                    }
+                }
+
+            }
+        }
+    }
+}
